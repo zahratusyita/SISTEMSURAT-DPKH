@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.sipas-sidebar { transform: translateX(-100%); }
+.sipas-sidebar.sidebar-open { transform: translateX(0); }
+@media (min-width: 1024px) {
+    .sipas-sidebar { transform: translateX(0); }
+}

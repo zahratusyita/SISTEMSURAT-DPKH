@@ -1,0 +1,615 @@
+{
+  "date": "2026-09-17",
+  "automated_tests": 46,
+  "assertions": 401,
+  "browser_groups": 8,
+  "scenarios": [
+    {
+      "no": 1,
+      "feature": "Login dengan akun aktif",
+      "action": "Email dan kata sandi benar.",
+      "expected": "Pengguna masuk ke dashboard.",
+      "actual": "Autentikasi berhasil dan dashboard dapat diakses.",
+      "status": "Lulus",
+      "evidence": [
+        "test_valid_login_and_logout",
+        "Login melalui browser dan sesi database"
+      ]
+    },
+    {
+      "no": 2,
+      "feature": "Login dengan kata sandi salah",
+      "action": "Email terdaftar dan kata sandi salah.",
+      "expected": "Login ditolak dan pesan kesalahan ditampilkan.",
+      "actual": "Pesan validasi muncul; pengguna tetap belum login.",
+      "status": "Lulus",
+      "evidence": [
+        "test_wrong_login_and_empty_credentials_are_rejected"
+      ]
+    },
+    {
+      "no": 3,
+      "feature": "Validasi formulir login",
+      "action": "Kredensial kosong atau format email salah.",
+      "expected": "Kolom wajib dan format email divalidasi.",
+      "actual": "Input ditolak dengan pesan kesalahan pada kolom terkait.",
+      "status": "Lulus",
+      "evidence": [
+        "test_wrong_login_and_empty_credentials_are_rejected"
+      ]
+    },
+    {
+      "no": 4,
+      "feature": "Pembatasan akses tamu",
+      "action": "Buka halaman administrasi tanpa login.",
+      "expected": "Pengguna diarahkan ke halaman login.",
+      "actual": "Akses administrasi dialihkan ke login.",
+      "status": "Lulus",
+      "evidence": [
+        "test_guest_cannot_access_administration"
+      ]
+    },
+    {
+      "no": 5,
+      "feature": "Logout",
+      "action": "Keluar dari akun yang sedang login.",
+      "expected": "Sesi autentikasi berakhir.",
+      "actual": "Pengguna keluar dan kembali ke halaman login.",
+      "status": "Lulus",
+      "evidence": [
+        "test_valid_login_and_logout"
+      ]
+    },
+    {
+      "no": 6,
+      "feature": "Login akun nonaktif",
+      "action": "Gunakan kredensial akun yang telah dihapus.",
+      "expected": "Akun tidak dapat login.",
+      "actual": "Autentikasi akun nonaktif ditolak.",
+      "status": "Lulus",
+      "evidence": [
+        "test_deleted_account_cannot_login"
+      ]
+    },
+    {
+      "no": 7,
+      "feature": "Perhitungan dashboard",
+      "action": "Fixture September 2026: 2 surat masuk bulan ini, 1 surat keluar bulan ini, 3 surat tahun ini, 5 surat keseluruhan.",
+      "expected": "Empat kartu menampilkan 2, 1, 3, dan 5.",
+      "actual": "Keempat angka sesuai; daftar surat terbaru tampil.",
+      "status": "Lulus",
+      "evidence": [
+        "test_dashboard_displays_correct_month_year_and_combined_counts"
+      ]
+    },
+    {
+      "no": 8,
+      "feature": "Navigasi menu utama",
+      "action": "Buka dashboard, surat masuk, surat keluar, profil, dan halaman impor.",
+      "expected": "Halaman tersedia dan dapat ditampilkan.",
+      "actual": "Seluruh halaman yang diperiksa berhasil dimuat.",
+      "status": "Lulus",
+      "evidence": [
+        "test_filters_lookup_and_all_pages_render",
+        "Semua menu utama dan halaman impor"
+      ]
+    },
+    {
+      "no": 9,
+      "feature": "Tambah surat masuk",
+      "action": "Isi data surat masuk dengan tanggal dan perihal valid.",
+      "expected": "Surat tersimpan dan tampil pada daftar.",
+      "actual": "Surat baru tampil pada daftar dan memiliki halaman detail.",
+      "status": "Lulus",
+      "evidence": [
+        "test_both_letter_types_complete_create_read_update_delete_through_http"
+      ]
+    },
+    {
+      "no": 10,
+      "feature": "Detail surat masuk",
+      "action": "Buka detail surat masuk yang baru dibuat.",
+      "expected": "Data surat dan pencatat ditampilkan.",
+      "actual": "Isi surat serta nama pencatat tampil sesuai data uji.",
+      "status": "Lulus",
+      "evidence": [
+        "test_both_letter_types_complete_create_read_update_delete_through_http",
+        "Tambah surat masuk, upload lampiran, dan identitas pencatat"
+      ]
+    },
+    {
+      "no": 11,
+      "feature": "Ubah surat masuk",
+      "action": "Ubah perihal surat masuk yang tersimpan.",
+      "expected": "Perubahan ditampilkan setelah disimpan.",
+      "actual": "Detail menampilkan perihal yang telah diubah.",
+      "status": "Lulus",
+      "evidence": [
+        "test_both_letter_types_complete_create_read_update_delete_through_http"
+      ]
+    },
+    {
+      "no": 12,
+      "feature": "Hapus surat masuk",
+      "action": "Hapus surat masuk yang tidak memiliki balasan.",
+      "expected": "Surat hilang dari daftar dan detail tidak tersedia.",
+      "actual": "Surat tidak tampil; permintaan detail menghasilkan 404.",
+      "status": "Lulus",
+      "evidence": [
+        "test_both_letter_types_complete_create_read_update_delete_through_http"
+      ]
+    },
+    {
+      "no": 13,
+      "feature": "Tambah surat keluar",
+      "action": "Isi surat keluar biasa dengan data valid.",
+      "expected": "Surat tersimpan dan tampil pada daftar.",
+      "actual": "Surat baru tampil pada daftar dan memiliki detail.",
+      "status": "Lulus",
+      "evidence": [
+        "test_both_letter_types_complete_create_read_update_delete_through_http"
+      ]
+    },
+    {
+      "no": 14,
+      "feature": "Detail surat keluar",
+      "action": "Buka detail surat keluar yang baru dibuat.",
+      "expected": "Data surat dan pencatat ditampilkan.",
+      "actual": "Data surat dan nama pencatat tampil sesuai input.",
+      "status": "Lulus",
+      "evidence": [
+        "test_both_letter_types_complete_create_read_update_delete_through_http"
+      ]
+    },
+    {
+      "no": 15,
+      "feature": "Ubah surat keluar",
+      "action": "Ubah perihal surat keluar yang tersimpan.",
+      "expected": "Perubahan tersimpan dan ditampilkan.",
+      "actual": "Detail menampilkan perihal yang telah diubah.",
+      "status": "Lulus",
+      "evidence": [
+        "test_both_letter_types_complete_create_read_update_delete_through_http"
+      ]
+    },
+    {
+      "no": 16,
+      "feature": "Hapus surat keluar",
+      "action": "Hapus surat keluar yang tersimpan.",
+      "expected": "Surat hilang dari daftar dan detail tidak tersedia.",
+      "actual": "Surat tidak tampil; detail menghasilkan 404.",
+      "status": "Lulus",
+      "evidence": [
+        "test_both_letter_types_complete_create_read_update_delete_through_http"
+      ]
+    },
+    {
+      "no": 17,
+      "feature": "Validasi kolom wajib surat",
+      "action": "Kosongkan perihal, tanggal surat, serta tanggal masuk atau keluar.",
+      "expected": "Penyimpanan ditolak dengan pesan kolom wajib.",
+      "actual": "Tiga kolom tersebut menghasilkan kesalahan validasi pada kedua jenis surat.",
+      "status": "Lulus",
+      "evidence": [
+        "test_required_letter_fields_are_rejected_for_both_types"
+      ]
+    },
+    {
+      "no": 18,
+      "feature": "Validasi batas tanggal dan teks",
+      "action": "Tanggal 0999-01-01, tanggal keluar dengan waktu, atau perihal 16.001 karakter.",
+      "expected": "Input di luar aturan penyimpanan ditolak.",
+      "actual": "Kesalahan validasi diterima; input tidak disimpan.",
+      "status": "Lulus",
+      "evidence": [
+        "test_dates_and_text_outside_mysql_limits_return_validation_errors"
+      ]
+    },
+    {
+      "no": 19,
+      "feature": "Unggah dan buka lampiran",
+      "action": "Unggah gambar PNG pada surat masuk lalu buka lampiran.",
+      "expected": "Lampiran tersimpan dan dapat dibuka.",
+      "actual": "Pencatatan berhasil; lampiran memberikan respons HTTP 200.",
+      "status": "Lulus",
+      "evidence": [
+        "Tambah surat masuk, upload lampiran, dan identitas pencatat"
+      ]
+    },
+    {
+      "no": 20,
+      "feature": "Penolakan jenis lampiran",
+      "action": "Unggah berkas EXE pada kedua jenis surat.",
+      "expected": "Jenis berkas yang tidak diizinkan ditolak.",
+      "actual": "Pesan validasi lampiran muncul pada kedua formulir.",
+      "status": "Lulus",
+      "evidence": [
+        "test_attachment_type_and_ten_megabyte_limit_are_validated"
+      ]
+    },
+    {
+      "no": 21,
+      "feature": "Batas ukuran lampiran",
+      "action": "Unggah PDF berukuran 10.241 KB, melebihi batas 10 MB.",
+      "expected": "Berkas terlalu besar ditolak.",
+      "actual": "Pesan validasi ukuran lampiran muncul.",
+      "status": "Lulus",
+      "evidence": [
+        "test_attachment_type_and_ten_megabyte_limit_are_validated"
+      ]
+    },
+    {
+      "no": 22,
+      "feature": "Pembacaan OCR",
+      "action": "Jalankan OCR pada gambar uji yang memuat tulisan SURAT.",
+      "expected": "Tulisan pada gambar dapat dikenali.",
+      "actual": "OCR menghasilkan teks yang memuat SURAT.",
+      "status": "Lulus",
+      "evidence": [
+        "OCR Tesseract membaca gambar dengan aset lokal"
+      ]
+    },
+    {
+      "no": 23,
+      "feature": "Pencarian surat",
+      "action": "Cari penanda BB-FEB pada kedua daftar surat.",
+      "expected": "Hanya data yang cocok ditampilkan.",
+      "actual": "Surat Februari tampil; data Januari dan Maret tidak tampil.",
+      "status": "Lulus",
+      "evidence": [
+        "test_search_month_year_all_months_and_date_order_for_both_types"
+      ]
+    },
+    {
+      "no": 24,
+      "feature": "Pencarian tanpa hasil",
+      "action": "Cari teks yang tidak ada pada data uji.",
+      "expected": "Halaman menampilkan daftar kosong tanpa gagal.",
+      "actual": "Respons HTTP 200 dengan hasil kosong.",
+      "status": "Lulus",
+      "evidence": [
+        "test_search_month_year_all_months_and_date_order_for_both_types"
+      ]
+    },
+    {
+      "no": 25,
+      "feature": "Filter bulan dan tahun",
+      "action": "Pilih Februari dan tahun 2026 pada kedua daftar.",
+      "expected": "Hanya surat Februari 2026 ditampilkan.",
+      "actual": "Data Februari tampil; data bulan lain tidak tampil.",
+      "status": "Lulus",
+      "evidence": [
+        "test_search_month_year_all_months_and_date_order_for_both_types"
+      ]
+    },
+    {
+      "no": 26,
+      "feature": "Urutan semua bulan",
+      "action": "Tampilkan semua bulan untuk data Januari, Februari, dan Maret 2026.",
+      "expected": "Surat diurutkan berdasarkan tanggal surat masuk atau keluar dari terbaru.",
+      "actual": "Urutan Maret, Februari, Januari sesuai pada kedua daftar.",
+      "status": "Lulus",
+      "evidence": [
+        "test_search_month_year_all_months_and_date_order_for_both_types"
+      ]
+    },
+    {
+      "no": 27,
+      "feature": "Validasi parameter filter",
+      "action": "Gunakan bulan 99 atau tahun dua digit 20.",
+      "expected": "Parameter tidak valid ditolak.",
+      "actual": "Permintaan menghasilkan validasi parameter filter.",
+      "status": "Lulus",
+      "evidence": [
+        "test_filters_lookup_and_all_pages_render",
+        "test_search_month_year_all_months_and_date_order_for_both_types"
+      ]
+    },
+    {
+      "no": 28,
+      "feature": "Pembagian halaman",
+      "action": "Tampilkan 12 surat lalu buka halaman kedua.",
+      "expected": "Halaman pertama berisi 10 surat; halaman kedua 2 surat.",
+      "actual": "Halaman pertama memuat surat 12–03; halaman kedua 02–01.",
+      "status": "Lulus",
+      "evidence": [
+        "test_pagination_shows_ten_records_and_remaining_records_on_page_two"
+      ]
+    },
+    {
+      "no": 29,
+      "feature": "Hubungan surat balasan",
+      "action": "Pilih surat masuk sebagai asal balasan surat keluar.",
+      "expected": "Referensi tersimpan; detail memiliki tautan dua arah.",
+      "actual": "Pencarian, pemilihan, serta tautan detail surat asal dan balasan berfungsi.",
+      "status": "Lulus",
+      "evidence": [
+        "test_reply_links_are_optional_validated_and_visible_both_ways",
+        "Pencarian dan pemilihan surat balasan serta tautan detail"
+      ]
+    },
+    {
+      "no": 30,
+      "feature": "Referensi balasan opsional",
+      "action": "Buat surat keluar biasa; hapus referensi balasan saat mengubah surat.",
+      "expected": "Surat keluar dapat disimpan tanpa surat asal.",
+      "actual": "Pembuatan biasa dan pengosongan referensi berhasil.",
+      "status": "Lulus",
+      "evidence": [
+        "test_both_letter_types_complete_create_read_update_delete_through_http",
+        "test_reply_links_are_optional_validated_and_visible_both_ways"
+      ]
+    },
+    {
+      "no": 31,
+      "feature": "Referensi balasan tidak valid",
+      "action": "Isi surat_masuk_id dengan ID 999999 yang tidak tersedia.",
+      "expected": "Penyimpanan ditolak.",
+      "actual": "Pesan validasi referensi surat masuk diterima.",
+      "status": "Lulus",
+      "evidence": [
+        "test_reply_links_are_optional_validated_and_visible_both_ways"
+      ]
+    },
+    {
+      "no": 32,
+      "feature": "Perlindungan surat asal",
+      "action": "Hapus atau reset surat masuk yang masih memiliki surat balasan.",
+      "expected": "Tindakan ditolak untuk menjaga hubungan surat.",
+      "actual": "Penghapusan dan reset ditolak; surat asal tetap tersedia.",
+      "status": "Lulus",
+      "evidence": [
+        "test_referenced_incoming_letter_and_reset_are_protected"
+      ]
+    },
+    {
+      "no": 33,
+      "feature": "Reset tanpa konfirmasi",
+      "action": "Reset surat keluar tanpa konfirmasi yang diwajibkan.",
+      "expected": "Reset ditolak.",
+      "actual": "Pesan validasi muncul dan data tetap ada.",
+      "status": "Lulus",
+      "evidence": [
+        "test_reset_requires_confirmation_and_keeps_other_letter_type"
+      ]
+    },
+    {
+      "no": 34,
+      "feature": "Reset dengan konfirmasi",
+      "action": "Reset surat keluar menggunakan konfirmasi HAPUS.",
+      "expected": "Surat keluar dihapus; surat masuk tetap ada.",
+      "actual": "Daftar surat keluar kosong; data surat masuk tetap tersedia.",
+      "status": "Lulus",
+      "evidence": [
+        "test_reset_requires_confirmation_and_keeps_other_letter_type"
+      ]
+    },
+    {
+      "no": 35,
+      "feature": "Pratinjau impor CSV",
+      "action": "Unggah CSV dengan 1 baris valid, 1 duplikat, dan 1 invalid.",
+      "expected": "Pratinjau membedakan ketiga status.",
+      "actual": "Jumlah pratinjau sesuai: 1 valid, 1 duplikat, 1 invalid.",
+      "status": "Lulus",
+      "evidence": [
+        "test_csv_preview_confirmation_and_replay_protection"
+      ]
+    },
+    {
+      "no": 36,
+      "feature": "Konfirmasi impor valid",
+      "action": "Simpan hasil pratinjau CSV tersebut.",
+      "expected": "Hanya baris valid ditambahkan.",
+      "actual": "Satu surat baru disimpan; duplikat dan baris invalid dilewati.",
+      "status": "Lulus",
+      "evidence": [
+        "test_csv_preview_confirmation_and_replay_protection"
+      ]
+    },
+    {
+      "no": 37,
+      "feature": "Perlindungan konfirmasi impor",
+      "action": "Gunakan ulang token impor atau konfirmasi dengan pengguna lain.",
+      "expected": "Konfirmasi yang tidak sah ditolak.",
+      "actual": "Token ulang dan token milik pengguna lain ditolak.",
+      "status": "Lulus",
+      "evidence": [
+        "test_csv_preview_confirmation_and_replay_protection",
+        "test_invalid_import_file_and_other_user_confirmation_are_rejected"
+      ]
+    },
+    {
+      "no": 38,
+      "feature": "Pemilihan Sheet1 dan Sheet2",
+      "action": "Impor satu workbook: Sheet1 surat masuk dan Sheet2 surat keluar.",
+      "expected": "Masing-masing fitur membaca sheet yang sesuai.",
+      "actual": "Pratinjau dan konfirmasi kedua jenis surat berhasil memakai sheet yang sesuai.",
+      "status": "Lulus",
+      "evidence": [
+        "test_same_workbook_imports_incoming_sheet1_and_outgoing_sheet2",
+        "Impor dan konfirmasi satu workbook: Sheet1 masuk, Sheet2 keluar"
+      ]
+    },
+    {
+      "no": 39,
+      "feature": "Impor agenda dengan header bertingkat",
+      "action": "Gunakan agenda dengan header multiline dan tanggal pada sel gabungan.",
+      "expected": "Header dan tanggal agenda dikenali.",
+      "actual": "Data surat keluar valid dikenali dengan tanggal yang sesuai.",
+      "status": "Lulus",
+      "evidence": [
+        "test_sheet2_legacy_agenda_handles_multiline_headers_and_merged_dates"
+      ]
+    },
+    {
+      "no": 40,
+      "feature": "Tanggal keluar kosong pada agenda lama",
+      "action": "Kosongkan kolom tanggal keluar; isi tanggal surat pada agenda dengan tiga baris header.",
+      "expected": "Tanggal surat menjadi tanggal keluar sesuai aturan agenda lama; baris judul dilewati.",
+      "actual": "Dua data uji valid terbaca; tanggal terisi dan catatan penyesuaian tersedia.",
+      "status": "Lulus",
+      "evidence": [
+        "test_legacy_blank_outgoing_dates_use_letter_dates_and_skip_three_row_header"
+      ]
+    },
+    {
+      "no": 41,
+      "feature": "Tanggal impor yang tidak valid",
+      "action": "Isi tanggal agenda tidak valid, kosongkan kedua tanggal, atau kosongkan tanggal keluar pada template datar.",
+      "expected": "Input tanggal tidak valid tetap ditolak.",
+      "actual": "Ketiga kondisi menghasilkan baris invalid; tanggal salah tidak diganti otomatis.",
+      "status": "Lulus",
+      "evidence": [
+        "test_explicit_invalid_legacy_outgoing_date_is_not_replaced",
+        "test_legacy_missing_both_dates_is_not_accepted",
+        "test_a_truly_missing_outgoing_date_still_requires_validation"
+      ]
+    },
+    {
+      "no": 42,
+      "feature": "Pemilihan sheet berdasarkan isi",
+      "action": "Nama sheet tidak sesuai header; uji pula nama sheet yang cocok dengan huruf berbeda.",
+      "expected": "Isi header menentukan jenis; sheet bernama sesuai diprioritaskan bila isinya cocok.",
+      "actual": "Sheet yang tepat dipilih pada kedua kondisi.",
+      "status": "Lulus",
+      "evidence": [
+        "test_sheet_name_does_not_override_wrong_letter_headers",
+        "test_matching_named_sheet_is_preferred_case_insensitively"
+      ]
+    },
+    {
+      "no": 43,
+      "feature": "Workbook tanpa sheet surat keluar",
+      "action": "Impor melalui fitur surat keluar dengan workbook yang hanya berisi surat masuk.",
+      "expected": "Pesan bahwa sheet sesuai tidak tersedia ditampilkan.",
+      "actual": "Impor ditolak; baris surat masuk tidak dibaca sebagai surat keluar.",
+      "status": "Lulus",
+      "evidence": [
+        "test_missing_outgoing_sheet_is_reported_without_reading_incoming_rows"
+      ]
+    },
+    {
+      "no": 44,
+      "feature": "Format impor tidak sesuai",
+      "action": "Unggah CSV dengan header not,a,valid,template.",
+      "expected": "Format tidak sesuai ditolak.",
+      "actual": "Pesan kesalahan format impor ditampilkan.",
+      "status": "Lulus",
+      "evidence": [
+        "test_invalid_import_file_and_other_user_confirmation_are_rejected"
+      ]
+    },
+    {
+      "no": 45,
+      "feature": "Ekspor surat ke Excel",
+      "action": "Ekspor daftar surat masuk dan surat keluar.",
+      "expected": "Berkas Excel dapat diunduh.",
+      "actual": "Kedua endpoint memberi HTTP 200 dan berkas unduhan; unduhan browser berhasil.",
+      "status": "Lulus",
+      "evidence": [
+        "test_both_letter_exports_are_downloadable_excel_files",
+        "Unduhan ekspor Excel melalui browser"
+      ]
+    },
+    {
+      "no": 46,
+      "feature": "Perubahan profil akun",
+      "action": "Ubah nama dan email dengan nilai valid.",
+      "expected": "Profil baru tersimpan.",
+      "actual": "Nama dan email diperbarui sesuai input.",
+      "status": "Lulus",
+      "evidence": [
+        "test_profile_updates_and_admin_creation"
+      ]
+    },
+    {
+      "no": 47,
+      "feature": "Validasi email profil dan admin",
+      "action": "Gunakan email milik akun lain atau email berformat salah.",
+      "expected": "Email tidak valid atau duplikat ditolak.",
+      "actual": "Pesan validasi muncul; data profil lama tetap tersedia.",
+      "status": "Lulus",
+      "evidence": [
+        "test_duplicate_and_invalid_profile_admin_emails_are_rejected"
+      ]
+    },
+    {
+      "no": 48,
+      "feature": "Perubahan kata sandi valid",
+      "action": "Isi kata sandi lama benar, kata sandi baru, dan konfirmasi yang cocok.",
+      "expected": "Kata sandi baru tersimpan.",
+      "actual": "Kata sandi akun berhasil diperbarui dan cocok dengan nilai baru.",
+      "status": "Lulus",
+      "evidence": [
+        "test_profile_updates_and_admin_creation"
+      ]
+    },
+    {
+      "no": 49,
+      "feature": "Penolakan perubahan kata sandi",
+      "action": "Gunakan kata sandi lama salah, kata sandi baru kurang dari 8 karakter, atau konfirmasi berbeda.",
+      "expected": "Perubahan ditolak dengan pesan terkait.",
+      "actual": "Ketiga kondisi menghasilkan kesalahan validasi.",
+      "status": "Lulus",
+      "evidence": [
+        "test_wrong_old_password_short_password_and_mismatched_confirmation_are_rejected"
+      ]
+    },
+    {
+      "no": 50,
+      "feature": "Penambahan administrator",
+      "action": "Isi nama, email unik, dan kata sandi valid.",
+      "expected": "Akun administrator baru tersedia.",
+      "actual": "Akun baru berhasil dibuat sesuai input.",
+      "status": "Lulus",
+      "evidence": [
+        "test_profile_updates_and_admin_creation"
+      ]
+    },
+    {
+      "no": 51,
+      "feature": "Penghapusan akun lain",
+      "action": "Hapus administrator lain yang memiliki riwayat pencatatan surat.",
+      "expected": "Akun dinonaktifkan dan sesinya dicabut; riwayat pencatat terjaga.",
+      "actual": "Akun tidak dapat login; sesi dicabut dan identitas pencatat tetap ada.",
+      "status": "Lulus",
+      "evidence": [
+        "test_account_removal_preserves_authorship_and_revokes_sessions",
+        "test_deleted_account_cannot_login"
+      ]
+    },
+    {
+      "no": 52,
+      "feature": "Perlindungan akun sendiri",
+      "action": "Administrator mencoba menghapus akunnya sendiri.",
+      "expected": "Penghapusan ditolak.",
+      "actual": "Akun aktif sendiri tetap tersedia.",
+      "status": "Lulus",
+      "evidence": [
+        "test_account_removal_preserves_authorship_and_revokes_sessions"
+      ]
+    },
+    {
+      "no": 53,
+      "feature": "Perlindungan identitas pencatat",
+      "action": "Kirim created_by atau updated_by palsu saat menyimpan surat.",
+      "expected": "Input identitas palsu ditolak dan surat tidak disimpan.",
+      "actual": "Kesalahan validasi identitas muncul; tidak ada surat baru tersimpan.",
+      "status": "Lulus",
+      "evidence": [
+        "test_client_cannot_forge_creator_or_editor"
+      ]
+    },
+    {
+      "no": 54,
+      "feature": "Tampilan dan menu ponsel",
+      "action": "Buka detail balasan pada layar lebar 390 px lalu buka dan tutup menu.",
+      "expected": "Menu dapat digunakan tanpa halaman meluber horizontal.",
+      "actual": "Menu terbuka dan tertutup; tidak ada overflow horizontal.",
+      "status": "Lulus",
+      "evidence": [
+        "Detail balasan pada tampilan mobile"
+      ]
+    }
+  ]
+}

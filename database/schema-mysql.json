@@ -1,0 +1,576 @@
+{
+    "version": "8.4.10",
+    "database": "sipas_db",
+    "tables": {
+        "cache": [
+            {
+                "name": "key",
+                "type": "varchar(255)",
+                "nullable": "NO",
+                "column_key": "PRI"
+            },
+            {
+                "name": "value",
+                "type": "mediumtext",
+                "nullable": "NO",
+                "column_key": ""
+            },
+            {
+                "name": "expiration",
+                "type": "int",
+                "nullable": "NO",
+                "column_key": ""
+            }
+        ],
+        "cache_locks": [
+            {
+                "name": "key",
+                "type": "varchar(255)",
+                "nullable": "NO",
+                "column_key": "PRI"
+            },
+            {
+                "name": "owner",
+                "type": "varchar(255)",
+                "nullable": "NO",
+                "column_key": ""
+            },
+            {
+                "name": "expiration",
+                "type": "int",
+                "nullable": "NO",
+                "column_key": ""
+            }
+        ],
+        "failed_jobs": [
+            {
+                "name": "id",
+                "type": "bigint unsigned",
+                "nullable": "NO",
+                "column_key": "PRI"
+            },
+            {
+                "name": "uuid",
+                "type": "varchar(255)",
+                "nullable": "NO",
+                "column_key": "UNI"
+            },
+            {
+                "name": "connection",
+                "type": "text",
+                "nullable": "NO",
+                "column_key": ""
+            },
+            {
+                "name": "queue",
+                "type": "text",
+                "nullable": "NO",
+                "column_key": ""
+            },
+            {
+                "name": "payload",
+                "type": "longtext",
+                "nullable": "NO",
+                "column_key": ""
+            },
+            {
+                "name": "exception",
+                "type": "longtext",
+                "nullable": "NO",
+                "column_key": ""
+            },
+            {
+                "name": "failed_at",
+                "type": "timestamp",
+                "nullable": "NO",
+                "column_key": ""
+            }
+        ],
+        "job_batches": [
+            {
+                "name": "id",
+                "type": "varchar(255)",
+                "nullable": "NO",
+                "column_key": "PRI"
+            },
+            {
+                "name": "name",
+                "type": "varchar(255)",
+                "nullable": "NO",
+                "column_key": ""
+            },
+            {
+                "name": "total_jobs",
+                "type": "int",
+                "nullable": "NO",
+                "column_key": ""
+            },
+            {
+                "name": "pending_jobs",
+                "type": "int",
+                "nullable": "NO",
+                "column_key": ""
+            },
+            {
+                "name": "failed_jobs",
+                "type": "int",
+                "nullable": "NO",
+                "column_key": ""
+            },
+            {
+                "name": "failed_job_ids",
+                "type": "longtext",
+                "nullable": "NO",
+                "column_key": ""
+            },
+            {
+                "name": "options",
+                "type": "mediumtext",
+                "nullable": "YES",
+                "column_key": ""
+            },
+            {
+                "name": "cancelled_at",
+                "type": "int",
+                "nullable": "YES",
+                "column_key": ""
+            },
+            {
+                "name": "created_at",
+                "type": "int",
+                "nullable": "NO",
+                "column_key": ""
+            },
+            {
+                "name": "finished_at",
+                "type": "int",
+                "nullable": "YES",
+                "column_key": ""
+            }
+        ],
+        "jobs": [
+            {
+                "name": "id",
+                "type": "bigint unsigned",
+                "nullable": "NO",
+                "column_key": "PRI"
+            },
+            {
+                "name": "queue",
+                "type": "varchar(255)",
+                "nullable": "NO",
+                "column_key": "MUL"
+            },
+            {
+                "name": "payload",
+                "type": "longtext",
+                "nullable": "NO",
+                "column_key": ""
+            },
+            {
+                "name": "attempts",
+                "type": "tinyint unsigned",
+                "nullable": "NO",
+                "column_key": ""
+            },
+            {
+                "name": "reserved_at",
+                "type": "int unsigned",
+                "nullable": "YES",
+                "column_key": ""
+            },
+            {
+                "name": "available_at",
+                "type": "int unsigned",
+                "nullable": "NO",
+                "column_key": ""
+            },
+            {
+                "name": "created_at",
+                "type": "int unsigned",
+                "nullable": "NO",
+                "column_key": ""
+            }
+        ],
+        "migrations": [
+            {
+                "name": "id",
+                "type": "int unsigned",
+                "nullable": "NO",
+                "column_key": "PRI"
+            },
+            {
+                "name": "migration",
+                "type": "varchar(255)",
+                "nullable": "NO",
+                "column_key": ""
+            },
+            {
+                "name": "batch",
+                "type": "int",
+                "nullable": "NO",
+                "column_key": ""
+            }
+        ],
+        "password_reset_tokens": [
+            {
+                "name": "email",
+                "type": "varchar(255)",
+                "nullable": "NO",
+                "column_key": "PRI"
+            },
+            {
+                "name": "token",
+                "type": "varchar(255)",
+                "nullable": "NO",
+                "column_key": ""
+            },
+            {
+                "name": "created_at",
+                "type": "timestamp",
+                "nullable": "YES",
+                "column_key": ""
+            }
+        ],
+        "sessions": [
+            {
+                "name": "id",
+                "type": "varchar(255)",
+                "nullable": "NO",
+                "column_key": "PRI"
+            },
+            {
+                "name": "user_id",
+                "type": "bigint unsigned",
+                "nullable": "YES",
+                "column_key": "MUL"
+            },
+            {
+                "name": "ip_address",
+                "type": "varchar(45)",
+                "nullable": "YES",
+                "column_key": ""
+            },
+            {
+                "name": "user_agent",
+                "type": "text",
+                "nullable": "YES",
+                "column_key": ""
+            },
+            {
+                "name": "payload",
+                "type": "longtext",
+                "nullable": "NO",
+                "column_key": ""
+            },
+            {
+                "name": "last_activity",
+                "type": "int",
+                "nullable": "NO",
+                "column_key": "MUL"
+            }
+        ],
+        "surat_keluar": [
+            {
+                "name": "id",
+                "type": "bigint unsigned",
+                "nullable": "NO",
+                "column_key": "PRI"
+            },
+            {
+                "name": "tanggal_keluar_surat",
+                "type": "date",
+                "nullable": "NO",
+                "column_key": "MUL"
+            },
+            {
+                "name": "nomor_urut",
+                "type": "varchar(255)",
+                "nullable": "YES",
+                "column_key": ""
+            },
+            {
+                "name": "alamat_penerima",
+                "type": "text",
+                "nullable": "YES",
+                "column_key": ""
+            },
+            {
+                "name": "tanggal_surat",
+                "type": "date",
+                "nullable": "NO",
+                "column_key": ""
+            },
+            {
+                "name": "nomor_surat",
+                "type": "varchar(255)",
+                "nullable": "YES",
+                "column_key": "MUL"
+            },
+            {
+                "name": "perihal",
+                "type": "text",
+                "nullable": "NO",
+                "column_key": ""
+            },
+            {
+                "name": "asal",
+                "type": "varchar(255)",
+                "nullable": "YES",
+                "column_key": ""
+            },
+            {
+                "name": "lampiran_path",
+                "type": "varchar(255)",
+                "nullable": "YES",
+                "column_key": ""
+            },
+            {
+                "name": "lampiran_nama_asli",
+                "type": "varchar(255)",
+                "nullable": "YES",
+                "column_key": ""
+            },
+            {
+                "name": "lampiran_mime",
+                "type": "varchar(255)",
+                "nullable": "YES",
+                "column_key": ""
+            },
+            {
+                "name": "lampiran_ukuran",
+                "type": "bigint unsigned",
+                "nullable": "YES",
+                "column_key": ""
+            },
+            {
+                "name": "created_at",
+                "type": "timestamp",
+                "nullable": "YES",
+                "column_key": ""
+            },
+            {
+                "name": "updated_at",
+                "type": "timestamp",
+                "nullable": "YES",
+                "column_key": ""
+            },
+            {
+                "name": "created_by",
+                "type": "bigint unsigned",
+                "nullable": "YES",
+                "column_key": "MUL"
+            },
+            {
+                "name": "updated_by",
+                "type": "bigint unsigned",
+                "nullable": "YES",
+                "column_key": "MUL"
+            },
+            {
+                "name": "surat_masuk_id",
+                "type": "bigint unsigned",
+                "nullable": "YES",
+                "column_key": "MUL"
+            }
+        ],
+        "surat_masuk": [
+            {
+                "name": "id",
+                "type": "bigint unsigned",
+                "nullable": "NO",
+                "column_key": "PRI"
+            },
+            {
+                "name": "tanggal_masuk_surat",
+                "type": "date",
+                "nullable": "NO",
+                "column_key": "MUL"
+            },
+            {
+                "name": "nomor_urut",
+                "type": "varchar(255)",
+                "nullable": "YES",
+                "column_key": ""
+            },
+            {
+                "name": "alamat_pengirim",
+                "type": "text",
+                "nullable": "YES",
+                "column_key": ""
+            },
+            {
+                "name": "tanggal_surat",
+                "type": "date",
+                "nullable": "NO",
+                "column_key": ""
+            },
+            {
+                "name": "nomor_surat",
+                "type": "varchar(255)",
+                "nullable": "YES",
+                "column_key": "MUL"
+            },
+            {
+                "name": "perihal",
+                "type": "text",
+                "nullable": "NO",
+                "column_key": ""
+            },
+            {
+                "name": "tujuan_disposisi",
+                "type": "varchar(255)",
+                "nullable": "YES",
+                "column_key": ""
+            },
+            {
+                "name": "lampiran_path",
+                "type": "varchar(255)",
+                "nullable": "YES",
+                "column_key": ""
+            },
+            {
+                "name": "lampiran_nama_asli",
+                "type": "varchar(255)",
+                "nullable": "YES",
+                "column_key": ""
+            },
+            {
+                "name": "lampiran_mime",
+                "type": "varchar(255)",
+                "nullable": "YES",
+                "column_key": ""
+            },
+            {
+                "name": "lampiran_ukuran",
+                "type": "bigint unsigned",
+                "nullable": "YES",
+                "column_key": ""
+            },
+            {
+                "name": "created_at",
+                "type": "timestamp",
+                "nullable": "YES",
+                "column_key": ""
+            },
+            {
+                "name": "updated_at",
+                "type": "timestamp",
+                "nullable": "YES",
+                "column_key": ""
+            },
+            {
+                "name": "created_by",
+                "type": "bigint unsigned",
+                "nullable": "YES",
+                "column_key": "MUL"
+            },
+            {
+                "name": "updated_by",
+                "type": "bigint unsigned",
+                "nullable": "YES",
+                "column_key": "MUL"
+            }
+        ],
+        "users": [
+            {
+                "name": "id",
+                "type": "bigint unsigned",
+                "nullable": "NO",
+                "column_key": "PRI"
+            },
+            {
+                "name": "name",
+                "type": "varchar(255)",
+                "nullable": "NO",
+                "column_key": ""
+            },
+            {
+                "name": "email",
+                "type": "varchar(255)",
+                "nullable": "NO",
+                "column_key": "UNI"
+            },
+            {
+                "name": "email_verified_at",
+                "type": "timestamp",
+                "nullable": "YES",
+                "column_key": ""
+            },
+            {
+                "name": "password",
+                "type": "varchar(255)",
+                "nullable": "NO",
+                "column_key": ""
+            },
+            {
+                "name": "remember_token",
+                "type": "varchar(100)",
+                "nullable": "YES",
+                "column_key": ""
+            },
+            {
+                "name": "created_at",
+                "type": "timestamp",
+                "nullable": "YES",
+                "column_key": ""
+            },
+            {
+                "name": "updated_at",
+                "type": "timestamp",
+                "nullable": "YES",
+                "column_key": ""
+            },
+            {
+                "name": "deleted_at",
+                "type": "timestamp",
+                "nullable": "YES",
+                "column_key": ""
+            }
+        ]
+    },
+    "relations": [
+        {
+            "child_table": "sessions",
+            "child_column": "user_id",
+            "parent_table": "users",
+            "parent_column": "id",
+            "delete_rule": "CASCADE"
+        },
+        {
+            "child_table": "surat_keluar",
+            "child_column": "created_by",
+            "parent_table": "users",
+            "parent_column": "id",
+            "delete_rule": "RESTRICT"
+        },
+        {
+            "child_table": "surat_keluar",
+            "child_column": "surat_masuk_id",
+            "parent_table": "surat_masuk",
+            "parent_column": "id",
+            "delete_rule": "RESTRICT"
+        },
+        {
+            "child_table": "surat_keluar",
+            "child_column": "updated_by",
+            "parent_table": "users",
+            "parent_column": "id",
+            "delete_rule": "RESTRICT"
+        },
+        {
+            "child_table": "surat_masuk",
+            "child_column": "created_by",
+            "parent_table": "users",
+            "parent_column": "id",
+            "delete_rule": "RESTRICT"
+        },
+        {
+            "child_table": "surat_masuk",
+            "child_column": "updated_by",
+            "parent_table": "users",
+            "parent_column": "id",
+            "delete_rule": "RESTRICT"
+        }
+    ]
+}

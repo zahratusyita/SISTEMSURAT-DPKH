@@ -1,0 +1,113 @@
+erDiagram
+    users |o..o{ sessions : "user_id"
+    users |o..o{ surat_keluar : "created_by"
+    surat_masuk |o..o{ surat_keluar : "surat_masuk_id"
+    users |o..o{ surat_keluar : "updated_by"
+    users |o..o{ surat_masuk : "created_by"
+    users |o..o{ surat_masuk : "updated_by"
+    cache {
+        varchar_255_ key PK
+        mediumtext value
+        int expiration
+    }
+    cache_locks {
+        varchar_255_ key PK
+        varchar_255_ owner
+        int expiration
+    }
+    failed_jobs {
+        bigint_unsigned id PK
+        varchar_255_ uuid UK
+        text connection
+        text queue
+        longtext payload
+        longtext exception
+        timestamp failed_at
+    }
+    job_batches {
+        varchar_255_ id PK
+        varchar_255_ name
+        int total_jobs
+        int pending_jobs
+        int failed_jobs
+        longtext failed_job_ids
+        mediumtext options "nullable"
+        int cancelled_at "nullable"
+        int created_at
+        int finished_at "nullable"
+    }
+    jobs {
+        bigint_unsigned id PK
+        varchar_255_ queue
+        longtext payload
+        tinyint_unsigned attempts
+        int_unsigned reserved_at "nullable"
+        int_unsigned available_at
+        int_unsigned created_at
+    }
+    migrations {
+        int_unsigned id PK
+        varchar_255_ migration
+        int batch
+    }
+    password_reset_tokens {
+        varchar_255_ email PK
+        varchar_255_ token
+        timestamp created_at "nullable"
+    }
+    sessions {
+        varchar_255_ id PK
+        bigint_unsigned user_id FK "nullable"
+        varchar_45_ ip_address "nullable"
+        text user_agent "nullable"
+        longtext payload
+        int last_activity
+    }
+    surat_keluar {
+        bigint_unsigned id PK
+        date tanggal_keluar_surat
+        varchar_255_ nomor_urut "nullable"
+        text alamat_penerima "nullable"
+        date tanggal_surat
+        varchar_255_ nomor_surat "nullable"
+        text perihal
+        varchar_255_ asal "nullable"
+        varchar_255_ lampiran_path "nullable"
+        varchar_255_ lampiran_nama_asli "nullable"
+        varchar_255_ lampiran_mime "nullable"
+        bigint_unsigned lampiran_ukuran "nullable"
+        timestamp created_at "nullable"
+        timestamp updated_at "nullable"
+        bigint_unsigned created_by FK "nullable"
+        bigint_unsigned updated_by FK "nullable"
+        bigint_unsigned surat_masuk_id FK "nullable"
+    }
+    surat_masuk {
+        bigint_unsigned id PK
+        date tanggal_masuk_surat
+        varchar_255_ nomor_urut "nullable"
+        text alamat_pengirim "nullable"
+        date tanggal_surat
+        varchar_255_ nomor_surat "nullable"
+        text perihal
+        varchar_255_ tujuan_disposisi "nullable"
+        varchar_255_ lampiran_path "nullable"
+        varchar_255_ lampiran_nama_asli "nullable"
+        varchar_255_ lampiran_mime "nullable"
+        bigint_unsigned lampiran_ukuran "nullable"
+        timestamp created_at "nullable"
+        timestamp updated_at "nullable"
+        bigint_unsigned created_by FK "nullable"
+        bigint_unsigned updated_by FK "nullable"
+    }
+    users {
+        bigint_unsigned id PK
+        varchar_255_ name
+        varchar_255_ email UK
+        timestamp email_verified_at "nullable"
+        varchar_255_ password
+        varchar_100_ remember_token "nullable"
+        timestamp created_at "nullable"
+        timestamp updated_at "nullable"
+        timestamp deleted_at "nullable"
+    }

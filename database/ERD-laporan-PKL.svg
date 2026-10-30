@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1480" viewBox="0 0 1800 1480">
+<rect width="100%" height="100%" fill="white"/>
+<polyline points="670,108 610,108 610,1238 540,1238" fill="none" stroke="black" stroke-width="2"/>
+<text x="618" y="93" font-family="Arial" font-size="17" font-weight="normal">0..1</text>
+<text x="546" y="1228" font-family="Arial" font-size="17" font-weight="normal">0..N</text>
+<polyline points="556,1229 540,1238 556,1247" fill="none" stroke="black" stroke-width="2"/>
+<polyline points="670,108 568,108 568,1278 540,1278" fill="none" stroke="black" stroke-width="2"/>
+<text x="618" y="93" font-family="Arial" font-size="17" font-weight="normal">0..1</text>
+<text x="546" y="1268" font-family="Arial" font-size="17" font-weight="normal">0..N</text>
+<polyline points="556,1269 540,1278 556,1287" fill="none" stroke="black" stroke-width="2"/>
+<polyline points="1130,108 1190,108 1190,1238 1260,1238" fill="none" stroke="black" stroke-width="2"/>
+<text x="1138" y="93" font-family="Arial" font-size="17" font-weight="normal">0..1</text>
+<text x="1211" y="1228" font-family="Arial" font-size="17" font-weight="normal">0..N</text>
+<polyline points="1244,1229 1260,1238 1244,1247" fill="none" stroke="black" stroke-width="2"/>
+<polyline points="1130,108 1232,108 1232,1278 1260,1278" fill="none" stroke="black" stroke-width="2"/>
+<text x="1138" y="93" font-family="Arial" font-size="17" font-weight="normal">0..1</text>
+<text x="1211" y="1268" font-family="Arial" font-size="17" font-weight="normal">0..N</text>
+<polyline points="1244,1269 1260,1278 1244,1287" fill="none" stroke="black" stroke-width="2"/>
+<polyline points="80,678 30,678 30,1390 1770,1390 1770,1318 1720,1318" fill="none" stroke="black" stroke-width="2"/>
+<text x="32" y="667" font-family="Arial" font-size="17" font-weight="normal">0..1</text>
+<text x="1725" y="1307" font-family="Arial" font-size="17" font-weight="normal">0..N</text>
+<polyline points="1736,1309 1720,1318 1736,1327" fill="none" stroke="black" stroke-width="2"/>
+<text x="630" y="1424" font-family="Arial" font-size="21" font-weight="normal">surat_keluar.surat_masuk_id → surat_masuk.id</text>
+<polyline points="670,40 1130,40 1130,448 670,448 670,40" fill="none" stroke="black" stroke-width="2"/>
+<polyline points="670,88 1130,88" fill="none" stroke="black" stroke-width="2"/>
+<polyline points="728,88 728,448" fill="none" stroke="black" stroke-width="2"/>
+<text x="870" y="75" font-family="Arial" font-size="24" font-weight="bold">users</text>
+<text x="680" y="115" font-family="Arial" font-size="19" font-weight="bold">PK</text>
+<text x="742" y="118" font-family="Arial" font-size="22" font-weight="bold">id</text>
+<polyline points="670,128 1130,128" fill="none" stroke="black" stroke-width="2"/>
+<text x="742" y="158" font-family="Arial" font-size="22" font-weight="normal">name</text>
+<text x="742" y="198" font-family="Arial" font-size="22" font-weight="normal">email</text>
+<text x="742" y="238" font-family="Arial" font-size="22" font-weight="normal">email_verified_at</text>
+<text x="742" y="278" font-family="Arial" font-size="22" font-weight="normal">password</text>
+<text x="742" y="318" font-family="Arial" font-size="22" font-weight="normal">remember_token</text>
+<text x="742" y="358" font-family="Arial" font-size="22" font-weight="normal">created_at</text>
+<text x="742" y="398" font-family="Arial" font-size="22" font-weight="normal">updated_at</text>
+<text x="742" y="438" font-family="Arial" font-size="22" font-weight="normal">deleted_at</text>
+<polyline points="80,610 540,610 540,1298 80,1298 80,610" fill="none" stroke="black" stroke-width="2"/>
+<polyline points="80,658 540,658" fill="none" stroke="black" stroke-width="2"/>
+<polyline points="138,658 138,1298" fill="none" stroke="black" stroke-width="2"/>
+<text x="244" y="645" font-family="Arial" font-size="24" font-weight="bold">surat_masuk</text>
+<text x="90" y="685" font-family="Arial" font-size="19" font-weight="bold">PK</text>
+<text x="152" y="688" font-family="Arial" font-size="22" font-weight="bold">id</text>
+<polyline points="80,698 540,698" fill="none" stroke="black" stroke-width="2"/>
+<text x="152" y="728" font-family="Arial" font-size="22" font-weight="normal">tanggal_masuk_surat</text>
+<text x="152" y="768" font-family="Arial" font-size="22" font-weight="normal">nomor_urut</text>
+<text x="152" y="808" font-family="Arial" font-size="22" font-weight="normal">alamat_pengirim</text>
+<text x="152" y="848" font-family="Arial" font-size="22" font-weight="normal">tanggal_surat</text>
+<text x="152" y="888" font-family="Arial" font-size="22" font-weight="normal">nomor_surat</text>
+<text x="152" y="928" font-family="Arial" font-size="22" font-weight="normal">perihal</text>
+<text x="152" y="968" font-family="Arial" font-size="22" font-weight="normal">tujuan_disposisi</text>
+<text x="152" y="1008" font-family="Arial" font-size="22" font-weight="normal">lampiran_path</text>
+<text x="152" y="1048" font-family="Arial" font-size="22" font-weight="normal">lampiran_nama_asli</text>
+<text x="152" y="1088" font-family="Arial" font-size="22" font-weight="normal">lampiran_mime</text>
+<text x="152" y="1128" font-family="Arial" font-size="22" font-weight="normal">lampiran_ukuran</text>
+<text x="152" y="1168" font-family="Arial" font-size="22" font-weight="normal">created_at</text>
+<text x="152" y="1208" font-family="Arial" font-size="22" font-weight="normal">updated_at</text>
+<text x="90" y="1245" font-family="Arial" font-size="19" font-weight="bold">FK</text>
+<text x="152" y="1248" font-family="Arial" font-size="22" font-weight="normal">created_by</text>
+<text x="90" y="1285" font-family="Arial" font-size="19" font-weight="bold">FK</text>
+<text x="152" y="1288" font-family="Arial" font-size="22" font-weight="normal">updated_by</text>
+<polyline points="1260,610 1720,610 1720,1338 1260,1338 1260,610" fill="none" stroke="black" stroke-width="2"/>
+<polyline points="1260,658 1720,658" fill="none" stroke="black" stroke-width="2"/>
+<polyline points="1318,658 1318,1338" fill="none" stroke="black" stroke-width="2"/>
+<text x="1418" y="645" font-family="Arial" font-size="24" font-weight="bold">surat_keluar</text>
+<text x="1270" y="685" font-family="Arial" font-size="19" font-weight="bold">PK</text>
+<text x="1332" y="688" font-family="Arial" font-size="22" font-weight="bold">id</text>
+<polyline points="1260,698 1720,698" fill="none" stroke="black" stroke-width="2"/>
+<text x="1332" y="728" font-family="Arial" font-size="22" font-weight="normal">tanggal_keluar_surat</text>
+<text x="1332" y="768" font-family="Arial" font-size="22" font-weight="normal">nomor_urut</text>
+<text x="1332" y="808" font-family="Arial" font-size="22" font-weight="normal">alamat_penerima</text>
+<text x="1332" y="848" font-family="Arial" font-size="22" font-weight="normal">tanggal_surat</text>
+<text x="1332" y="888" font-family="Arial" font-size="22" font-weight="normal">nomor_surat</text>
+<text x="1332" y="928" font-family="Arial" font-size="22" font-weight="normal">perihal</text>
+<text x="1332" y="968" font-family="Arial" font-size="22" font-weight="normal">asal</text>
+<text x="1332" y="1008" font-family="Arial" font-size="22" font-weight="normal">lampiran_path</text>
+<text x="1332" y="1048" font-family="Arial" font-size="22" font-weight="normal">lampiran_nama_asli</text>
+<text x="1332" y="1088" font-family="Arial" font-size="22" font-weight="normal">lampiran_mime</text>
+<text x="1332" y="1128" font-family="Arial" font-size="22" font-weight="normal">lampiran_ukuran</text>
+<text x="1332" y="1168" font-family="Arial" font-size="22" font-weight="normal">created_at</text>
+<text x="1332" y="1208" font-family="Arial" font-size="22" font-weight="normal">updated_at</text>
+<text x="1270" y="1245" font-family="Arial" font-size="19" font-weight="bold">FK</text>
+<text x="1332" y="1248" font-family="Arial" font-size="22" font-weight="normal">created_by</text>
+<text x="1270" y="1285" font-family="Arial" font-size="19" font-weight="bold">FK</text>
+<text x="1332" y="1288" font-family="Arial" font-size="22" font-weight="normal">updated_by</text>
+<text x="1270" y="1325" font-family="Arial" font-size="19" font-weight="bold">FK</text>
+<text x="1332" y="1328" font-family="Arial" font-size="22" font-weight="normal">surat_masuk_id</text>
+<text x="660" y="510" font-family="Arial" font-size="20" font-weight="normal">PK: Primary Key     FK: Foreign Key</text>
+<text x="660" y="544" font-family="Arial" font-size="18" font-weight="normal">0..1: nol atau satu     0..N: nol atau banyak</text>
+</svg>

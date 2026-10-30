@@ -1,0 +1,187 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1560" viewBox="0 0 1600 1560">
+<rect width="100%" height="100%" fill="white"/>
+<text x="50" y="56" fill="#20334a" font-family="Arial,sans-serif" font-size="34" font-weight="bold">ERD SIPAS - Database MySQL</text>
+<text x="50" y="94" fill="#637487" font-family="Arial,sans-serif" font-size="19" font-weight="normal">Skema aktual MySQL 8.4.10 | 11 tabel | 6 foreign key | PK: primary key  FK: foreign key  UK: unique key  ?: nullable</text>
+<polyline points="595,215 535,215 535,1171 460,1171" fill="none" stroke="#345f91" stroke-width="3"/>
+<polyline points="595,215 500,215 500,1205 460,1205" fill="none" stroke="#345f91" stroke-width="3"/>
+<polyline points="1005,215 1065,215 1065,1171 1140,1171" fill="none" stroke="#345f91" stroke-width="3"/>
+<polyline points="1005,215 1100,215 1100,1205 1140,1205" fill="none" stroke="#345f91" stroke-width="3"/>
+<text x="465" y="1161" fill="#345f91" font-family="Arial,sans-serif" font-size="14" font-weight="bold">0..N</text>
+<text x="465" y="1195" fill="#345f91" font-family="Arial,sans-serif" font-size="14" font-weight="bold">0..N</text>
+<text x="1105" y="1161" fill="#345f91" font-family="Arial,sans-serif" font-size="14" font-weight="bold">0..N</text>
+<text x="1105" y="1195" fill="#345f91" font-family="Arial,sans-serif" font-size="14" font-weight="bold">0..N</text>
+<text x="541" y="204" fill="#345f91" font-family="Arial,sans-serif" font-size="16" font-weight="bold">0..1</text>
+<text x="1009" y="204" fill="#345f91" font-family="Arial,sans-serif" font-size="16" font-weight="bold">0..1</text>
+<polyline points="50,695 20,695 20,1430 1580,1430 1580,1239 1550,1239" fill="none" stroke="#986b2d" stroke-width="3"/>
+<text x="20" y="684" fill="#986b2d" font-family="Arial,sans-serif" font-size="17" font-weight="bold">0..1</text>
+<text x="1552" y="1229" fill="#986b2d" font-family="Arial,sans-serif" font-size="17" font-weight="bold">0..N</text>
+<text x="545" y="1464" fill="#986b2d" font-family="Arial,sans-serif" font-size="20" font-weight="bold">surat_masuk_id: surat keluar balasan (opsional)</text>
+<rect x="595" y="150" width="410" height="354" fill="white" stroke="#9eacba" stroke-width="2"/>
+<rect x="595" y="150" width="410" height="48" fill="#244e77" stroke="none" stroke-width="2"/>
+<text x="610" y="183" fill="white" font-family="Arial,sans-serif" font-size="23" font-weight="bold">users</text>
+<rect x="597" y="198" width="406" height="34" fill="#f3f6f9" stroke="none" stroke-width="2"/>
+<text x="607" y="221" fill="#345f91" font-family="Arial,sans-serif" font-size="16" font-weight="bold">PK</text>
+<text x="647" y="222" fill="#20334a" font-family="Arial,sans-serif" font-size="18" font-weight="bold">id</text>
+<text x="902" y="220" fill="#637487" font-family="Arial,sans-serif" font-size="15" font-weight="normal">bigint</text>
+<text x="607" y="255" fill="#345f91" font-family="Arial,sans-serif" font-size="16" font-weight="bold"></text>
+<text x="647" y="256" fill="#20334a" font-family="Arial,sans-serif" font-size="18" font-weight="normal">name</text>
+<text x="902" y="254" fill="#637487" font-family="Arial,sans-serif" font-size="15" font-weight="normal">str</text>
+<rect x="597" y="266" width="406" height="34" fill="#f3f6f9" stroke="none" stroke-width="2"/>
+<text x="607" y="289" fill="#345f91" font-family="Arial,sans-serif" font-size="16" font-weight="bold">UK</text>
+<text x="647" y="290" fill="#20334a" font-family="Arial,sans-serif" font-size="18" font-weight="normal">email</text>
+<text x="902" y="288" fill="#637487" font-family="Arial,sans-serif" font-size="15" font-weight="normal">str</text>
+<text x="607" y="323" fill="#345f91" font-family="Arial,sans-serif" font-size="16" font-weight="bold"></text>
+<text x="647" y="324" fill="#20334a" font-family="Arial,sans-serif" font-size="18" font-weight="normal">email_verified_at</text>
+<text x="902" y="322" fill="#637487" font-family="Arial,sans-serif" font-size="15" font-weight="normal">timestamp?</text>
+<rect x="597" y="334" width="406" height="34" fill="#f3f6f9" stroke="none" stroke-width="2"/>
+<text x="607" y="357" fill="#345f91" font-family="Arial,sans-serif" font-size="16" font-weight="bold"></text>
+<text x="647" y="358" fill="#20334a" font-family="Arial,sans-serif" font-size="18" font-weight="normal">password</text>
+<text x="902" y="356" fill="#637487" font-family="Arial,sans-serif" font-size="15" font-weight="normal">str</text>
+<text x="607" y="391" fill="#345f91" font-family="Arial,sans-serif" font-size="16" font-weight="bold"></text>
+<text x="647" y="392" fill="#20334a" font-family="Arial,sans-serif" font-size="18" font-weight="normal">remember_token</text>
+<text x="902" y="390" fill="#637487" font-family="Arial,sans-serif" font-size="15" font-weight="normal">str?</text>
+<rect x="597" y="402" width="406" height="34" fill="#f3f6f9" stroke="none" stroke-width="2"/>
+<text x="607" y="425" fill="#345f91" font-family="Arial,sans-serif" font-size="16" font-weight="bold"></text>
+<text x="647" y="426" fill="#20334a" font-family="Arial,sans-serif" font-size="18" font-weight="normal">created_at</text>
+<text x="902" y="424" fill="#637487" font-family="Arial,sans-serif" font-size="15" font-weight="normal">timestamp?</text>
+<text x="607" y="459" fill="#345f91" font-family="Arial,sans-serif" font-size="16" font-weight="bold"></text>
+<text x="647" y="460" fill="#20334a" font-family="Arial,sans-serif" font-size="18" font-weight="normal">updated_at</text>
+<text x="902" y="458" fill="#637487" font-family="Arial,sans-serif" font-size="15" font-weight="normal">timestamp?</text>
+<rect x="597" y="470" width="406" height="34" fill="#f3f6f9" stroke="none" stroke-width="2"/>
+<text x="607" y="493" fill="#345f91" font-family="Arial,sans-serif" font-size="16" font-weight="bold"></text>
+<text x="647" y="494" fill="#20334a" font-family="Arial,sans-serif" font-size="18" font-weight="normal">deleted_at</text>
+<text x="902" y="492" fill="#637487" font-family="Arial,sans-serif" font-size="15" font-weight="normal">timestamp?</text>
+<rect x="50" y="630" width="410" height="592" fill="white" stroke="#9eacba" stroke-width="2"/>
+<rect x="50" y="630" width="410" height="48" fill="#244e77" stroke="none" stroke-width="2"/>
+<text x="65" y="663" fill="white" font-family="Arial,sans-serif" font-size="23" font-weight="bold">surat_masuk</text>
+<rect x="52" y="678" width="406" height="34" fill="#f3f6f9" stroke="none" stroke-width="2"/>
+<text x="62" y="701" fill="#345f91" font-family="Arial,sans-serif" font-size="16" font-weight="bold">PK</text>
+<text x="102" y="702" fill="#20334a" font-family="Arial,sans-serif" font-size="18" font-weight="bold">id</text>
+<text x="357" y="700" fill="#637487" font-family="Arial,sans-serif" font-size="15" font-weight="normal">bigint</text>
+<text x="62" y="735" fill="#345f91" font-family="Arial,sans-serif" font-size="16" font-weight="bold"></text>
+<text x="102" y="736" fill="#20334a" font-family="Arial,sans-serif" font-size="18" font-weight="normal">tanggal_masuk_surat</text>
+<text x="357" y="734" fill="#637487" font-family="Arial,sans-serif" font-size="15" font-weight="normal">date</text>
+<rect x="52" y="746" width="406" height="34" fill="#f3f6f9" stroke="none" stroke-width="2"/>
+<text x="62" y="769" fill="#345f91" font-family="Arial,sans-serif" font-size="16" font-weight="bold"></text>
+<text x="102" y="770" fill="#20334a" font-family="Arial,sans-serif" font-size="18" font-weight="normal">nomor_urut</text>
+<text x="357" y="768" fill="#637487" font-family="Arial,sans-serif" font-size="15" font-weight="normal">str?</text>
+<text x="62" y="803" fill="#345f91" font-family="Arial,sans-serif" font-size="16" font-weight="bold"></text>
+<text x="102" y="804" fill="#20334a" font-family="Arial,sans-serif" font-size="18" font-weight="normal">alamat_pengirim</text>
+<text x="357" y="802" fill="#637487" font-family="Arial,sans-serif" font-size="15" font-weight="normal">text?</text>
+<rect x="52" y="814" width="406" height="34" fill="#f3f6f9" stroke="none" stroke-width="2"/>
+<text x="62" y="837" fill="#345f91" font-family="Arial,sans-serif" font-size="16" font-weight="bold"></text>
+<text x="102" y="838" fill="#20334a" font-family="Arial,sans-serif" font-size="18" font-weight="normal">tanggal_surat</text>
+<text x="357" y="836" fill="#637487" font-family="Arial,sans-serif" font-size="15" font-weight="normal">date</text>
+<text x="62" y="871" fill="#345f91" font-family="Arial,sans-serif" font-size="16" font-weight="bold"></text>
+<text x="102" y="872" fill="#20334a" font-family="Arial,sans-serif" font-size="18" font-weight="normal">nomor_surat</text>
+<text x="357" y="870" fill="#637487" font-family="Arial,sans-serif" font-size="15" font-weight="normal">str?</text>
+<rect x="52" y="882" width="406" height="34" fill="#f3f6f9" stroke="none" stroke-width="2"/>
+<text x="62" y="905" fill="#345f91" font-family="Arial,sans-serif" font-size="16" font-weight="bold"></text>
+<text x="102" y="906" fill="#20334a" font-family="Arial,sans-serif" font-size="18" font-weight="normal">perihal</text>
+<text x="357" y="904" fill="#637487" font-family="Arial,sans-serif" font-size="15" font-weight="normal">text</text>
+<text x="62" y="939" fill="#345f91" font-family="Arial,sans-serif" font-size="16" font-weight="bold"></text>
+<text x="102" y="940" fill="#20334a" font-family="Arial,sans-serif" font-size="18" font-weight="normal">tujuan_disposisi</text>
+<text x="357" y="938" fill="#637487" font-family="Arial,sans-serif" font-size="15" font-weight="normal">str?</text>
+<rect x="52" y="950" width="406" height="34" fill="#f3f6f9" stroke="none" stroke-width="2"/>
+<text x="62" y="973" fill="#345f91" font-family="Arial,sans-serif" font-size="16" font-weight="bold"></text>
+<text x="102" y="974" fill="#20334a" font-family="Arial,sans-serif" font-size="18" font-weight="normal">lampiran_path</text>
+<text x="357" y="972" fill="#637487" font-family="Arial,sans-serif" font-size="15" font-weight="normal">str?</text>
+<text x="62" y="1007" fill="#345f91" font-family="Arial,sans-serif" font-size="16" font-weight="bold"></text>
+<text x="102" y="1008" fill="#20334a" font-family="Arial,sans-serif" font-size="18" font-weight="normal">lampiran_nama_asli</text>
+<text x="357" y="1006" fill="#637487" font-family="Arial,sans-serif" font-size="15" font-weight="normal">str?</text>
+<rect x="52" y="1018" width="406" height="34" fill="#f3f6f9" stroke="none" stroke-width="2"/>
+<text x="62" y="1041" fill="#345f91" font-family="Arial,sans-serif" font-size="16" font-weight="bold"></text>
+<text x="102" y="1042" fill="#20334a" font-family="Arial,sans-serif" font-size="18" font-weight="normal">lampiran_mime</text>
+<text x="357" y="1040" fill="#637487" font-family="Arial,sans-serif" font-size="15" font-weight="normal">str?</text>
+<text x="62" y="1075" fill="#345f91" font-family="Arial,sans-serif" font-size="16" font-weight="bold"></text>
+<text x="102" y="1076" fill="#20334a" font-family="Arial,sans-serif" font-size="18" font-weight="normal">lampiran_ukuran</text>
+<text x="357" y="1074" fill="#637487" font-family="Arial,sans-serif" font-size="15" font-weight="normal">bigint?</text>
+<rect x="52" y="1086" width="406" height="34" fill="#f3f6f9" stroke="none" stroke-width="2"/>
+<text x="62" y="1109" fill="#345f91" font-family="Arial,sans-serif" font-size="16" font-weight="bold"></text>
+<text x="102" y="1110" fill="#20334a" font-family="Arial,sans-serif" font-size="18" font-weight="normal">created_at</text>
+<text x="357" y="1108" fill="#637487" font-family="Arial,sans-serif" font-size="15" font-weight="normal">timestamp?</text>
+<text x="62" y="1143" fill="#345f91" font-family="Arial,sans-serif" font-size="16" font-weight="bold"></text>
+<text x="102" y="1144" fill="#20334a" font-family="Arial,sans-serif" font-size="18" font-weight="normal">updated_at</text>
+<text x="357" y="1142" fill="#637487" font-family="Arial,sans-serif" font-size="15" font-weight="normal">timestamp?</text>
+<rect x="52" y="1154" width="406" height="34" fill="#f3f6f9" stroke="none" stroke-width="2"/>
+<text x="62" y="1177" fill="#345f91" font-family="Arial,sans-serif" font-size="16" font-weight="bold">FK</text>
+<text x="102" y="1178" fill="#20334a" font-family="Arial,sans-serif" font-size="18" font-weight="normal">created_by</text>
+<text x="357" y="1176" fill="#637487" font-family="Arial,sans-serif" font-size="15" font-weight="normal">bigint?</text>
+<text x="62" y="1211" fill="#345f91" font-family="Arial,sans-serif" font-size="16" font-weight="bold">FK</text>
+<text x="102" y="1212" fill="#20334a" font-family="Arial,sans-serif" font-size="18" font-weight="normal">updated_by</text>
+<text x="357" y="1210" fill="#637487" font-family="Arial,sans-serif" font-size="15" font-weight="normal">bigint?</text>
+<rect x="1140" y="630" width="410" height="626" fill="white" stroke="#9eacba" stroke-width="2"/>
+<rect x="1140" y="630" width="410" height="48" fill="#244e77" stroke="none" stroke-width="2"/>
+<text x="1155" y="663" fill="white" font-family="Arial,sans-serif" font-size="23" font-weight="bold">surat_keluar</text>
+<rect x="1142" y="678" width="406" height="34" fill="#f3f6f9" stroke="none" stroke-width="2"/>
+<text x="1152" y="701" fill="#345f91" font-family="Arial,sans-serif" font-size="16" font-weight="bold">PK</text>
+<text x="1192" y="702" fill="#20334a" font-family="Arial,sans-serif" font-size="18" font-weight="bold">id</text>
+<text x="1447" y="700" fill="#637487" font-family="Arial,sans-serif" font-size="15" font-weight="normal">bigint</text>
+<text x="1152" y="735" fill="#345f91" font-family="Arial,sans-serif" font-size="16" font-weight="bold"></text>
+<text x="1192" y="736" fill="#20334a" font-family="Arial,sans-serif" font-size="18" font-weight="normal">tanggal_keluar_surat</text>
+<text x="1447" y="734" fill="#637487" font-family="Arial,sans-serif" font-size="15" font-weight="normal">date</text>
+<rect x="1142" y="746" width="406" height="34" fill="#f3f6f9" stroke="none" stroke-width="2"/>
+<text x="1152" y="769" fill="#345f91" font-family="Arial,sans-serif" font-size="16" font-weight="bold"></text>
+<text x="1192" y="770" fill="#20334a" font-family="Arial,sans-serif" font-size="18" font-weight="normal">nomor_urut</text>
+<text x="1447" y="768" fill="#637487" font-family="Arial,sans-serif" font-size="15" font-weight="normal">str?</text>
+<text x="1152" y="803" fill="#345f91" font-family="Arial,sans-serif" font-size="16" font-weight="bold"></text>
+<text x="1192" y="804" fill="#20334a" font-family="Arial,sans-serif" font-size="18" font-weight="normal">alamat_penerima</text>
+<text x="1447" y="802" fill="#637487" font-family="Arial,sans-serif" font-size="15" font-weight="normal">text?</text>
+<rect x="1142" y="814" width="406" height="34" fill="#f3f6f9" stroke="none" stroke-width="2"/>
+<text x="1152" y="837" fill="#345f91" font-family="Arial,sans-serif" font-size="16" font-weight="bold"></text>
+<text x="1192" y="838" fill="#20334a" font-family="Arial,sans-serif" font-size="18" font-weight="normal">tanggal_surat</text>
+<text x="1447" y="836" fill="#637487" font-family="Arial,sans-serif" font-size="15" font-weight="normal">date</text>
+<text x="1152" y="871" fill="#345f91" font-family="Arial,sans-serif" font-size="16" font-weight="bold"></text>
+<text x="1192" y="872" fill="#20334a" font-family="Arial,sans-serif" font-size="18" font-weight="normal">nomor_surat</text>
+<text x="1447" y="870" fill="#637487" font-family="Arial,sans-serif" font-size="15" font-weight="normal">str?</text>
+<rect x="1142" y="882" width="406" height="34" fill="#f3f6f9" stroke="none" stroke-width="2"/>
+<text x="1152" y="905" fill="#345f91" font-family="Arial,sans-serif" font-size="16" font-weight="bold"></text>
+<text x="1192" y="906" fill="#20334a" font-family="Arial,sans-serif" font-size="18" font-weight="normal">perihal</text>
+<text x="1447" y="904" fill="#637487" font-family="Arial,sans-serif" font-size="15" font-weight="normal">text</text>
+<text x="1152" y="939" fill="#345f91" font-family="Arial,sans-serif" font-size="16" font-weight="bold"></text>
+<text x="1192" y="940" fill="#20334a" font-family="Arial,sans-serif" font-size="18" font-weight="normal">asal</text>
+<text x="1447" y="938" fill="#637487" font-family="Arial,sans-serif" font-size="15" font-weight="normal">str?</text>
+<rect x="1142" y="950" width="406" height="34" fill="#f3f6f9" stroke="none" stroke-width="2"/>
+<text x="1152" y="973" fill="#345f91" font-family="Arial,sans-serif" font-size="16" font-weight="bold"></text>
+<text x="1192" y="974" fill="#20334a" font-family="Arial,sans-serif" font-size="18" font-weight="normal">lampiran_path</text>
+<text x="1447" y="972" fill="#637487" font-family="Arial,sans-serif" font-size="15" font-weight="normal">str?</text>
+<text x="1152" y="1007" fill="#345f91" font-family="Arial,sans-serif" font-size="16" font-weight="bold"></text>
+<text x="1192" y="1008" fill="#20334a" font-family="Arial,sans-serif" font-size="18" font-weight="normal">lampiran_nama_asli</text>
+<text x="1447" y="1006" fill="#637487" font-family="Arial,sans-serif" font-size="15" font-weight="normal">str?</text>
+<rect x="1142" y="1018" width="406" height="34" fill="#f3f6f9" stroke="none" stroke-width="2"/>
+<text x="1152" y="1041" fill="#345f91" font-family="Arial,sans-serif" font-size="16" font-weight="bold"></text>
+<text x="1192" y="1042" fill="#20334a" font-family="Arial,sans-serif" font-size="18" font-weight="normal">lampiran_mime</text>
+<text x="1447" y="1040" fill="#637487" font-family="Arial,sans-serif" font-size="15" font-weight="normal">str?</text>
+<text x="1152" y="1075" fill="#345f91" font-family="Arial,sans-serif" font-size="16" font-weight="bold"></text>
+<text x="1192" y="1076" fill="#20334a" font-family="Arial,sans-serif" font-size="18" font-weight="normal">lampiran_ukuran</text>
+<text x="1447" y="1074" fill="#637487" font-family="Arial,sans-serif" font-size="15" font-weight="normal">bigint?</text>
+<rect x="1142" y="1086" width="406" height="34" fill="#f3f6f9" stroke="none" stroke-width="2"/>
+<text x="1152" y="1109" fill="#345f91" font-family="Arial,sans-serif" font-size="16" font-weight="bold"></text>
+<text x="1192" y="1110" fill="#20334a" font-family="Arial,sans-serif" font-size="18" font-weight="normal">created_at</text>
+<text x="1447" y="1108" fill="#637487" font-family="Arial,sans-serif" font-size="15" font-weight="normal">timestamp?</text>
+<text x="1152" y="1143" fill="#345f91" font-family="Arial,sans-serif" font-size="16" font-weight="bold"></text>
+<text x="1192" y="1144" fill="#20334a" font-family="Arial,sans-serif" font-size="18" font-weight="normal">updated_at</text>
+<text x="1447" y="1142" fill="#637487" font-family="Arial,sans-serif" font-size="15" font-weight="normal">timestamp?</text>
+<rect x="1142" y="1154" width="406" height="34" fill="#f3f6f9" stroke="none" stroke-width="2"/>
+<text x="1152" y="1177" fill="#345f91" font-family="Arial,sans-serif" font-size="16" font-weight="bold">FK</text>
+<text x="1192" y="1178" fill="#20334a" font-family="Arial,sans-serif" font-size="18" font-weight="normal">created_by</text>
+<text x="1447" y="1176" fill="#637487" font-family="Arial,sans-serif" font-size="15" font-weight="normal">bigint?</text>
+<text x="1152" y="1211" fill="#345f91" font-family="Arial,sans-serif" font-size="16" font-weight="bold">FK</text>
+<text x="1192" y="1212" fill="#20334a" font-family="Arial,sans-serif" font-size="18" font-weight="normal">updated_by</text>
+<text x="1447" y="1210" fill="#637487" font-family="Arial,sans-serif" font-size="15" font-weight="normal">bigint?</text>
+<rect x="1142" y="1222" width="406" height="34" fill="#f3f6f9" stroke="none" stroke-width="2"/>
+<text x="1152" y="1245" fill="#345f91" font-family="Arial,sans-serif" font-size="16" font-weight="bold">FK</text>
+<text x="1192" y="1246" fill="#20334a" font-family="Arial,sans-serif" font-size="18" font-weight="normal">surat_masuk_id</text>
+<text x="1447" y="1244" fill="#637487" font-family="Arial,sans-serif" font-size="15" font-weight="normal">bigint?</text>
+<rect x="595" y="585" width="410" height="350" fill="#f4f7fa" stroke="#dbe3eb" stroke-width="2"/>
+<text x="615" y="628" fill="#20334a" font-family="Arial,sans-serif" font-size="23" font-weight="bold">Aturan hubungan data</text>
+<text x="615" y="668" fill="#20334a" font-family="Arial,sans-serif" font-size="18" font-weight="normal">created_by: administrator pencatat.</text>
+<text x="615" y="700" fill="#20334a" font-family="Arial,sans-serif" font-size="18" font-weight="normal">updated_by: pengubah terakhir.</text>
+<text x="615" y="732" fill="#20334a" font-family="Arial,sans-serif" font-size="18" font-weight="normal">Kedua kolom merujuk users.id.</text>
+<text x="615" y="764" fill="#20334a" font-family="Arial,sans-serif" font-size="18" font-weight="normal">Data lama boleh tanpa pencatat.</text>
+<text x="615" y="796" fill="#20334a" font-family="Arial,sans-serif" font-size="18" font-weight="normal">Surat keluar boleh tanpa balasan.</text>
+<text x="615" y="828" fill="#20334a" font-family="Arial,sans-serif" font-size="18" font-weight="normal">Akun memakai soft delete.</text>
+<text x="615" y="860" fill="#20334a" font-family="Arial,sans-serif" font-size="18" font-weight="normal">Penghapusan fisik pengguna / surat</text>
+<text x="615" y="892" fill="#20334a" font-family="Arial,sans-serif" font-size="18" font-weight="normal">asal yang dirujuk ditolak (RESTRICT).</text>
+<text x="50" y="1518" fill="#637487" font-family="Arial,sans-serif" font-size="18" font-weight="normal">Garis menunjukkan foreign key yang sudah diterapkan. Kardinalitas 0..1 mencakup kolom nullable; pengguna baru wajib dicatat server.</text>
+</svg>
